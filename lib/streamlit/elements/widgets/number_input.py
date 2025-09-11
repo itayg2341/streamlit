@@ -75,8 +75,17 @@ class NumberInputSerde:
     def serialize(self, v: Number | None) -> Number | None:
         return v
 
-    def deserialize(self, ui_value: Number | None) -> Number | None:
-        val: Number | None = ui_value if ui_value is not None else self.value
+    def deserialize(self, ui_value: Number | str | None) -> Number | None:
+        if isinstance(ui_value, str):
+            cleaned_value = ui_value.replace(" ", "")
+            if cleaned_value == "":
+                return None
+            try:
+                val: Number | None = float(cleaned_value)
+            except ValueError:
+                raise StreamlitInvalidNumberFormatError(f"{ui_value} is not a valid number.")
+        else:
+            val = ui_value if ui_value is not None else self.value
 
         if val is not None and self.data_type == NumberInputProto.INT:
             val = int(val)
@@ -535,7 +544,7 @@ class NumberInputMixin:
         try:
             float(number_format % 2)
         except (TypeError, ValueError):
-            raise StreamlitInvalidNumberFormatError(number_format)
+            raise StreamlitInvalidNumberFormatError(f"Format string for `st.number_input` contains invalid characters: '{number_format}'")
 
         # Ensure that the value matches arguments' types.
         all_ints = int_value and all_int_args
