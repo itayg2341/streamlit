@@ -379,14 +379,11 @@ class StreamlitJSNumberBoundsError(LocalizableStreamlitException):
 
 class StreamlitInvalidNumberFormatError(LocalizableStreamlitException):
     """Exception raised when the format string for `st.number_input` contains
-    invalid characters.
+    invalid characters or the user enters an invalid number.
     """
 
-    def __init__(self, format: str) -> None:
-        super().__init__(
-            "Format string for `st.number_input` contains invalid characters: {format}",
-            format=format,
-        )
+    def __init__(self, message: str) -> None:
+        super().__init__(message)
 
 
 # st.page_link
