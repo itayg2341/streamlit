@@ -259,17 +259,18 @@ const NumberInput: React.FC<Props> = ({
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ): void => {
     const { value: targetValue } = e.target
+    const cleanedValue = targetValue.replace(/[[:space:]]/g, "")
 
-    if (targetValue === "") {
+    if (cleanedValue === "") {
       setDirty(true)
       setValue(null)
     } else {
       let numValue: number
 
       if (element.dataType === NumberInputProto.DataType.INT) {
-        numValue = parseInt(targetValue, 10)
+        numValue = parseInt(cleanedValue, 10)
       } else {
-        numValue = parseFloat(targetValue)
+        numValue = parseFloat(cleanedValue)
       }
 
       setDirty(true)
