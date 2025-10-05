@@ -182,7 +182,7 @@ def _fragment(
             if ctx is None:
                 raise RuntimeError("ctx is None. This should never happen.")
 
-            if fragment_id in ctx.fragment_ids_this_run:
+            if ctx.fragment_ids_this_run:
                 # This script run is a run of one or more fragments. We restore the
                 # state of ctx.cursors and dg_stack to the snapshots we took when this
                 # fragment was declared.
