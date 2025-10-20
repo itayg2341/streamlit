@@ -3733,7 +3733,7 @@ __metadata:
     "@types/lodash": "npm:~4.17.20"
     "@types/mapbox-gl": "npm:~1.13.10"
     "@types/moment-duration-format": "npm:~2.2.6"
-    "@types/plotly.js": "npm:^3.0.3"
+    "@types/plotly.js": "npm:^3.0.7"
     "@types/react": "npm:^18.2.0"
     "@types/react-color": "npm:^3.0.13"
     "@types/react-dom": "npm:^18.2.0"
@@ -3775,7 +3775,7 @@ __metadata:
     node-emoji: "npm:^2.2.0"
     node-fetch: "npm:3.3.2"
     numbro: "npm:^2.5.0"
-    plotly.js: "npm:^3.1.0"
+    plotly.js: "npm:^3.1.1"
     postinstall-postinstall: "npm:^2.1.0"
     prettier: "npm:^3.6.2"
     protobufjs: "npm:^7.5.4"
@@ -5203,10 +5203,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/plotly.js@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "@types/plotly.js@npm:3.0.3"
-  checksum: 10c0/6a34d5f34b9b65a157856cf5b2b68789176299820211005e8028091c2ce3e4e67d95d7a39dd650afb13ba1c8965c0cd50a80800b94e23adb44a469c87a002307
+"@types/plotly.js@npm:^3.0.7":
+  version: 3.0.7
+  resolution: "@types/plotly.js@npm:3.0.7"
+  checksum: 10c0/a7f891855b18bf603111e6ac537728c38ea835365fcbeb8511632b66cb48169cb7cb30d1dce181294295c6a2b15e5dae3d6a7b0d852f5ab85c6e1c97217b5880
   languageName: node
   linkType: hard
 
@@ -16239,9 +16239,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"plotly.js@npm:^3.1.0":
-  version: 3.1.0
-  resolution: "plotly.js@npm:3.1.0"
+"plotly.js@npm:^3.1.1":
+  version: 3.1.2
+  resolution: "plotly.js@npm:3.1.2"
   dependencies:
     "@plotly/d3": "npm:3.8.2"
     "@plotly/d3-sankey": "npm:0.7.2"
@@ -16293,7 +16293,7 @@ __metadata:
     topojson-client: "npm:^3.1.0"
     webgl-context: "npm:^2.2.0"
     world-calendars: "npm:^1.0.4"
-  checksum: 10c0/8a761514c9d977b8d1d611ed7e8683b79e6d2160d850178129e1546644ebbdfeaaae696cac942d8eb636da536338f553389e72de0fccea8ec8a2f37812e5f582
+  checksum: 10c0/bce71152f389dc1f54c08a42194d4ffaac2d93d7bb735a35adcb8e0dee3940ac975587623f44eae119e7a4b77b234f114cd9c1bf8c51e834fc3177bc2e083c2b
   languageName: node
   linkType: hard
 
